@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:ng="http://angularjs.org">
+<head>
+	<meta charset="UTF-8">
+	<title><%= title %></title>
+</head>
+<body>
+
+	<h1><%= title %></h1>
+
+	<img src="assets/img/todologo.png" alt="todologo">
+
+	<section data-ng-view></section>
+
+	<!-- Render User Object -->
+	<script>
+	window.user = <%- user || 'null' %>;
+	</script>
+	
+	<!-- Angular Dependencies -->
+	<script type="text/javascript" src="/lib/angular/angular.min.js"></script>
+	<script type="text/javascript" src="/lib/angular-route/angular-route.min.js"></script>
+	<script type="text/javascript" src="/lib/angular-resource/angular-resource.min.js"></script>
+
+	<!-- User Module -->
+	<script type="text/javascript" src="/app/users/users.client.module.js"></script>
+	<script type="text/javascript" src="/app/users/services/users.client.service.js"></script>
+
+	<!-- Core Module -->
+	<script type="text/javascript" src="/app/core/core.client.module.js"></script>
+	<script type="text/javascript" src="/app/core/controllers/core.client.controller.js"></script>
+	<script type="text/javascript" src="/app/core/config/core.client.routes.js"></script>
+
+	<!-- Articles Module -->
+	<script type="text/javascript" src="/app/articles/articles.client.module.js"></script>
+	<script type="text/javascript" src="/app/articles/controllers/articles.client.controller.js"></script>
+	<script type="text/javascript" src="/app/articles/config/articles.client.routes.js"></script>
+	<script type="text/javascript" src="/app/articles/services/articles.client.service.js"></script>
+
+	<!-- Angular Application core -->
+	<script type="text/javascript" src="/app/app.js"></script>
+</body>
+</html>

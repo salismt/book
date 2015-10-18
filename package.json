@@ -1,0 +1,27 @@
+{
+  "name": "book",
+  "version": "1.0.0",
+  "description": "book practice web app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Salis Muhammad",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "compression": "^1.6.0",
+    "connect-flash": "^0.1.1",
+    "ejs": "^2.3.4",
+    "express": "^4.13.3",
+    "express-session": "^1.11.3",
+    "method-override": "^2.3.5",
+    "mongoose": "^4.1.11",
+    "morgan": "^1.6.1",
+    "passport": "^0.3.0",
+    "passport-facebook": "^2.0.0",
+    "passport-local": "^1.0.0",
+    "passport-twitter": "^1.0.3",
+    "socket.io": "~1.1.0"
+  }
+}

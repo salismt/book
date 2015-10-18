@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:ng="http://angularjs.org">
+<head>
+	<meta charset="UTF-8">
+	<title><%= title %></title>
+</head>
+<body>
+	
+	<% for (var i in messages) { %>
+		<div class="flash">
+			<%= messages[i] %>
+		</div>
+	<% } %>
+
+	<form action="/login" method="post">
+		
+		<div>
+			<label>Username:</label>
+			<input type="text" name="username">
+		</div>
+		
+		<div>
+			<label>Password:</label>
+			<input type="password" name="password">
+		</div>
+		
+		<div>
+			<input type="submit" value="login">
+		</div>		
+	</form>
+
+	<div>
+		<a href="/oauth/facebook">Sign in with Facebook</a>
+		<a href="/oauth/twitter">
+		Sign in with Twitter
+		</a>
+	</div>
+
+
+	<script type="text/javascript" src="/lib/angular/angular.min.js"></script>
+</body>
+</html>
