@@ -6,11 +6,11 @@ var express 	= require('./config/express'),
 	passport	= require('./config/passport');
 
 var db 	= mongoose(),
-	app = express(),
+	app = express(db),
 	passport = passport();
 
 
 app.listen(config.port);
-module.exports = app;
 
 console.log('server is running on port' + config.port);
+module.exports = app;

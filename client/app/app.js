@@ -1,6 +1,6 @@
 var appName = "book";
 
-var app = angular.module(appName, ['ngResource', 'ngRoute', 'core', 'users', 'articles']);
+var app = angular.module(appName, ['ngResource', 'ngRoute', 'core', 'users', 'articles', 'chat']);
 
 app.config(['$locationProvider', 
 	function ($locationProvider) {

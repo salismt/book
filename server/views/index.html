@@ -6,16 +6,15 @@
 </head>
 <body>
 
-	<h1><%= title %></h1>
-
-	<img src="assets/img/todologo.png" alt="todologo">
-
 	<section data-ng-view></section>
 
 	<!-- Render User Object -->
-	<script>
+	<script type="text/javascript">
 	window.user = <%- user || 'null' %>;
 	</script>
+
+	<!-- Load the Socket.io client -->
+	<script type="text/javascript" src="/socket.io/socket.io.js"></script>
 	
 	<!-- Angular Dependencies -->
 	<script type="text/javascript" src="/lib/angular/angular.min.js"></script>
@@ -34,8 +33,16 @@
 	<!-- Articles Module -->
 	<script type="text/javascript" src="/app/articles/articles.client.module.js"></script>
 	<script type="text/javascript" src="/app/articles/controllers/articles.client.controller.js"></script>
-	<script type="text/javascript" src="/app/articles/config/articles.client.routes.js"></script>
 	<script type="text/javascript" src="/app/articles/services/articles.client.service.js"></script>
+	<script type="text/javascript" src="/app/articles/config/articles.client.routes.js"></script>
+	
+
+	<!-- Chat Module -->
+	<script type="text/javascript" src="/app/chat/chat.client.module.js"></script>
+	<script type="text/javascript" src="/app/chat/services/socket.client.service.js"></script>
+	<script type="text/javascript" src="/app/chat/controllers/chat.client.controller.js"></script>
+	<script type="text/javascript" src="/app/chat/config/chat.client.routes.js"></script>
+	
 
 	<!-- Angular Application core -->
 	<script type="text/javascript" src="/app/app.js"></script>
