@@ -196,7 +196,5 @@ exports.requiresLogin = function (req, res, next) {
 			message: 'User is not logged in'
 		});
 	}
-	else {
-		return next();
-	}
+	next();
 };

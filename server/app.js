@@ -12,5 +12,5 @@ var db 	= mongoose(),
 
 app.listen(config.port);
 
-console.log('server is running on port' + config.port);
 module.exports = app;
+console.log('server is running on port' + config.port);
