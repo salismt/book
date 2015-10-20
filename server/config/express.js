@@ -41,9 +41,10 @@ module.exports = function (db) {
 		store: mongoStore
 	}));
 
-	app.set('views', './views');
+	app.set('views', './server/views');
 	app.engine('html', require('ejs').renderFile);
 	app.set('view engine', 'html');
+	app.set('view cache', true);
 
 	app.use(flash());
 	
@@ -54,7 +55,7 @@ module.exports = function (db) {
 	require('../api/users/users.server.routes')(app);
 	require('../api/articles/articles.server.routes')(app);
 
-	app.use(express.static('../client'));
+	app.use(express.static('./client'));
 
 	//call the socket.io configuration
 	require('./socketio')(server, io, mongoStore);
